@@ -1,0 +1,14 @@
+# 根据年级返回计算题的数列和运算序列
+def offerFigureOp(grade):
+    num_figure = getRand(1, 1, 2, 5)[0]  # 随机生成出要计算几个数字
+    if grade =='二' or grade =='一':
+        figure_list = getRand(num_figure, 1, 1, 100)
+        op_list = offerOp(num_figure,grade)
+    elif grade =='三' or grade == '四':
+        figure_list = getRand(num_figure,1,1,10000)
+        op_list = offerOp(num_figure,grade)
+    else:
+        figure_list = getRand(num_figure, 1, 1, 10000)
+        op_list = offerOp(num_figure, grade)
+
+    return figure_list,op_list
