@@ -1,0 +1,15 @@
+def offerOp(num_figure,grade):
+    all_op = ['+','-','*','/']
+    if num_figure == 1:
+        return
+    else:
+        #随机生成算符
+        if grade == '二' or grade== '一':
+            op_fromInt = getRand(num_figure-1,1,1,2)
+        else:
+            op_fromInt = getRand(num_figure - 1, 1, 1, 4)
+
+    op_out = []
+    for i in op_fromInt:
+            op_out.append(all_op[i-1])
+    return op_out
