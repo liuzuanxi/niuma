@@ -1,0 +1,10 @@
+#返回算式
+def offerArith(grade):
+    figure_list,op_list = offerFigureOp(grade)
+    arith = ''
+    for i in range(len(figure_list)):
+        if i < len(figure_list)-1:
+            arith+=str(figure_list[i])
+            arith+=op_list[i]
+    arith+=str(figure_list[-1])
+    return arith
