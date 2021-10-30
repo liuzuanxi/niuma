@@ -1,0 +1,12 @@
+def offerTest(grade,num_test):
+    num_right = 0
+    for i in range(num_test):
+
+        arith = offerArith(grade)
+        print(arith+'=?')
+        std_answer = getLastTwo(eval(arith))
+        answer_in = float(input())
+        if answer_in==std_answer:
+            num_right+=1
+        print('std: ',std_answer)
+    return num_right
